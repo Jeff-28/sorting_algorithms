@@ -1,8 +1,5 @@
 #ifndef SORT_H
 #define SORT_H
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 /**
  * struct listint_s - Doubly linked list node
@@ -40,5 +37,16 @@ void selection_sort(int *array, size_t size);
 /* 3 - Quick sort */
 void quick_sort(int *array, size_t size);
 
+/* 4 - Shell sort */
+void shell_sort(int *array, size_t size);
 
+
+/* 5 - Cocktail sort */
+void cocktail_sort_list(listint_t **list);
+
+
+/* ========== Helper functions ==========*/
+void swapper(int a, int b);
+
+void node_swapper(listint_t *node_1, listint_t *node_2);
 #endif
