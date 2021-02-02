@@ -1,5 +1,5 @@
-#ifndef SORT_H
-#define SORT_H
+#ifndef _SORT_H_
+#define _SORT_H_
 #include <stdlib.h>
 /**
  * struct listint_s - Doubly linked list node
@@ -39,5 +39,8 @@ void quick_sort(int *array, size_t size);
 void quick_sorting(int *array, int lo, int hi, size_t size);
 int partition(int *array, int lo, int hi, size_t size);
 void myswap(int *array, int i, int j, size_t size);
+
+/* 107- Quick sort (Hoare) */
+void quick_sort_hoare(int *array, size_t size);
 
 #endif
