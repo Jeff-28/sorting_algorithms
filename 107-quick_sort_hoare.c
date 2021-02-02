@@ -44,7 +44,7 @@ int partition(int *arr, int lo, int hi, size_t size)
 {
 	int pivot = arr[hi], i = lo, j = hi;
 
-	while (arr)
+	while (1)
 	{
 		while (arr[i] < pivot)
 		{
@@ -60,7 +60,6 @@ int partition(int *arr, int lo, int hi, size_t size)
 		i++;
 		j--;
 	}
-	return (i);
 }
 /**
  * myswap - swaps two values
