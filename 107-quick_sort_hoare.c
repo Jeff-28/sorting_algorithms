@@ -57,8 +57,10 @@ int partition(int *arr, int lo, int hi, size_t size)
 		if (i >= j)
 			return (i);
 		myswap(arr, i, j, size);
+		i++;
+		j--;
 	}
-	return (j);
+	return (i);
 }
 /**
  * myswap - swaps two values
