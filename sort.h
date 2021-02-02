@@ -30,7 +30,7 @@ void bubble_sort(int *array, size_t size);
 
 /* 1 - List sort */
 void insertion_sort_list(listint_t **list);
-
+void node_swapper(listint_t *to_front, listint_t *to_back);
 /* 2 - Selection sort */
 void selection_sort(int *array, size_t size);
 
