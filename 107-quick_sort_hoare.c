@@ -13,7 +13,7 @@ void myswap(int *array, int i, int j, size_t size)
 {
 	int temp = array[i];
 
-	if (array[i] != array[j])
+	if (i != j)
 	{
 		array[i] = array[j];
 		array[j] = temp;
