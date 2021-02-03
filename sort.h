@@ -26,7 +26,7 @@ void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 
 
-/* ========== Sort algorithms ========== */
+/* ========== Sorting algorithms ========== */
 
 /* 0 - Bubble sort */
 void bubble_sort(int *array, size_t size);
