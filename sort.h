@@ -40,6 +40,9 @@ void quick_sorting(int *array, int lo, int hi, size_t size);
 int partition(int *array, int lo, int hi, size_t size);
 void myswap(int *array, int i, int j, size_t size);
 
+/* 100 - Shell Sort */
+void shell_sort(int *array, size_t size);
+
 /* 107- Quick sort (Hoare) */
 void quick_sort_hoare(int *array, size_t size);
 
