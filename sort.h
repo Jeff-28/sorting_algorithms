@@ -43,7 +43,10 @@ void myswap(int *array, int i, int j, size_t size);
 /* 100 - Shell Sort */
 void shell_sort(int *array, size_t size);
 
-/* 107- Quick sort (Hoare) */
+/* 104-heap_sort */
+void heap_sort(int *array, size_t size);
+
+/* 107-quick_sort_hoare */
 void quick_sort_hoare(int *array, size_t size);
 
 #endif
