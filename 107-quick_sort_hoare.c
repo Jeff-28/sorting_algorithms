@@ -11,11 +11,10 @@
  */
 void myswap(int *array, int i, int j, size_t size)
 {
-	int temp;
+	int temp = array[i];
 
 	if (array[i] != array[j])
 	{
-		temp = array[i];
 		array[i] = array[j];
 		array[j] = temp;
 		print_array(array, size);
@@ -32,24 +31,26 @@ void myswap(int *array, int i, int j, size_t size)
  */
 int partition(int *arr, int lo, int hi, size_t size)
 {
-	int pivot = arr[hi], i = lo, j = hi;
+	int pivot = arr[hi];
 
-	while (1)
+	while (lo <= hi)
 	{
-		while (arr[i] < pivot)
+		while (arr[lo] < pivot)
 		{
-			i++;
+			lo++;
 		}
-		while (arr[j] > pivot)
+		while (arr[hi] > pivot)
 		{
-			j--;
+			hi--;
 		}
-		if (i >= j)
-			return (i);
-		myswap(arr, i, j, size);
-		i++;
-		j--;
+		if (lo <= hi)
+		{
+			myswap(arr, lo, hi, size);
+			lo++;
+			hi--;
+		}
 	}
+	return (hi);
 }
 /**
  * quick_sorting - recursive function

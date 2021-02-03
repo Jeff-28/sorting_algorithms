@@ -1,18 +1,5 @@
 #include "sort.h"
 /**
- * quick_sort - sorts an array of integers in ascending order using
- *				the Quick sort algorithm
- * @array: the array to be sorted
- * @size: the size of the array
- * Return: nothing
- */
-void quick_sort(int *array, size_t size)
-{
-	if (size < 2)
-		return;
-	quick_sorting(array, 0, size - 1, size);
-}
-/**
  * myswap - swaps two values
  * @array: array with integer values
  * @i: denotes an index
@@ -30,25 +17,6 @@ void myswap(int *array, int i, int j, size_t size)
 		array[i] = array[j];
 		array[j] = temp;
 		print_array(array, size);
-	}
-}
-/**
- * quick_sorting - recursive helper for quick_sort function
- * @array: array with integer values
- * @lo: minimum index
- * @hi: maximum index
- * @size: size of the array
- * Return: nothing
- */
-void quick_sorting(int *array, int lo, int hi, size_t size)
-{
-	int pivot;
-
-	if (lo < hi)
-	{
-		pivot = partition(array, lo, hi, size);
-		quick_sorting(array, lo, pivot - 1, size);
-		quick_sorting(array, pivot + 1, hi, size);
 	}
 }
 /**
@@ -74,4 +42,36 @@ int partition(int *array, int lo, int hi, size_t size)
 	}
 	myswap(array, i, hi, size);
 	return (i);
+}
+/**
+ * quick_sorting - recursive helper for quick_sort function
+ * @array: array with integer values
+ * @lo: minimum index
+ * @hi: maximum index
+ * @size: size of the array
+ * Return: nothing
+ */
+void quick_sorting(int *array, int lo, int hi, size_t size)
+{
+	int pivot;
+
+	if (lo < hi)
+	{
+		pivot = partition(array, lo, hi, size);
+		quick_sorting(array, lo, pivot - 1, size);
+		quick_sorting(array, pivot + 1, hi, size);
+	}
+}
+/**
+ * quick_sort - sorts an array of integers in ascending order using
+ *				the Quick sort algorithm
+ * @array: the array to be sorted
+ * @size: the size of the array
+ * Return: nothing
+ */
+void quick_sort(int *array, size_t size)
+{
+	if (size < 2)
+		return;
+	quick_sorting(array, 0, size - 1, size);
 }
