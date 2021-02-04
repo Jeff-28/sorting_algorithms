@@ -1,6 +1,8 @@
 #ifndef _SORT_H_
 #define _SORT_H_
 #include <stdlib.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
  * struct listint_s - Doubly linked list node
@@ -46,6 +48,9 @@ void shell_sort(int *array, size_t size);
 
 /* 101-cocktail_sort_list */
 void cocktail_sort_list(listint_t **list);
+
+/* 103-merge_sort */
+void merge_sort(int *array, size_t size);
 
 /* 104-heap_sort */
 void heap_sort(int *array, size_t size);
